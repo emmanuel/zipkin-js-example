@@ -50,3 +50,10 @@ Or, if you're using docker:
 ```bash
 $ docker run -d -p 9411:9411 openzipkin/zipkin
 ```
+
+# Docker image
+
+```bash
+$ docker build -t aledbf/zipkin-js-example:0.1 .
+$ docker push aledbf/zipkin-js-example:0.1
+```
