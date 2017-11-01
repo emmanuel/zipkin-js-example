@@ -15,12 +15,6 @@ spec:
         image: docker.io/openzipkin/zipkin:latest
         ports:
         - containerPort: 9411
-        env:
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: metadata.namespace
 
 ---
 
