@@ -46,6 +46,8 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: zipkin-js-example
+  annotations:
+    ingress.kubernetes.io/cors-allow-headers: x-b3-sampled,x-b3-spanid,x-b3-traceid,DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
 spec:
   rules:
   - host: zipkin-js-example
