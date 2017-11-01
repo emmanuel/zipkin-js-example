@@ -32,8 +32,13 @@ spec:
         ports:
         - containerPort: 8081
         env:
+        - name: ZIPKIN_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
         - name: ZIPKIN_URL
-          value: http://zipkin.default.svc.cluster.local:9411
+          value: http://zipkin.$(ZIPKIN_NAMESPACE).svc.cluster.local:9411
 
 ---
 
