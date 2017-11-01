@@ -32,8 +32,8 @@ spec:
         ports:
         - containerPort: 8081
         env:
-          - name: ZIPKIN_URL
-            value: zipkin.default.svc.cluster.local
+        - name: ZIPKIN_URL
+          value: http://zipkin.default.svc.cluster.local:9411
 
 ---
 
