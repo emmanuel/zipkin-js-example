@@ -28,3 +28,19 @@ spec:
     port: 9411
   selector:
     app: zipkin
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: zipkin
+spec:
+  rules:
+  - host: zipkin
+    http:
+      paths:
+      - backend:
+          serviceName: zipkin
+          servicePort: 9411
+        path: /
